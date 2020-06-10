@@ -1,0 +1,232 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "resources": [
+    {
+      "type": "Microsoft.Resources/resourceGroups",
+      "name": "TESH3ProjectRG",
+      "location": "southcentralus",
+      "apiVersion": "2019-10-01"
+    },
+    {
+      "type": "Microsoft.Resources/deployments",
+      "name": "[concat('TESH3ProjectRGDeployment', uniqueString(subscription().subscriptionId))]",
+      "resourceGroup": "TESH3ProjectRG",
+      "apiVersion": "2019-10-01",
+      "dependsOn": [
+        "TESH3ProjectRG"
+      ],
+      "properties": {
+        "mode": "Incremental",
+        "template": {
+          "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+          "contentVersion": "1.0.0.0",
+          "resources": [
+            {
+              "id": "/subscriptions/e4992556-c317-47df-93b8-f1d3ba8604c2/resourceGroups/TESH3ProjectRG/providers/Microsoft.Web/sites/TESH3Project",
+              "name": "TESH3Project",
+              "type": "Microsoft.Web/sites",
+              "kind": "app",
+              "location": "South Central US",
+              "tags": {
+                "hidden-related:/subscriptions/e4992556-c317-47df-93b8-f1d3ba8604c2/resourceGroups/MiProyecto/providers/Microsoft.Web/serverfarms/ASP-MiProyecto-90af": "empty"
+              },
+              "properties": {
+                "name": "TESH3Project",
+                "state": "Running",
+                "hostNames": [
+                  "tesh3project.azurewebsites.net"
+                ],
+                "webSpace": "MiProyecto-SouthCentralUSwebspace",
+                "selfLink": "https://waws-prod-sn1-153.api.azurewebsites.windows.net:454/subscriptions/e4992556-c317-47df-93b8-f1d3ba8604c2/webspaces/MiProyecto-SouthCentralUSwebspace/sites/TESH3Project",
+                "repositorySiteName": "TESH3Project",
+                "owner": null,
+                "usageState": 0,
+                "enabled": true,
+                "adminEnabled": true,
+                "enabledHostNames": [
+                  "tesh3project.azurewebsites.net",
+                  "tesh3project.scm.azurewebsites.net"
+                ],
+                "siteProperties": {
+                  "metadata": null,
+                  "properties": [
+                    {
+                      "name": "LinuxFxVersion",
+                      "value": ""
+                    },
+                    {
+                      "name": "WindowsFxVersion",
+                      "value": null
+                    }
+                  ],
+                  "appSettings": null
+                },
+                "availabilityState": 0,
+                "sslCertificates": null,
+                "csrs": [],
+                "cers": null,
+                "siteMode": null,
+                "hostNameSslStates": [
+                  {
+                    "name": "tesh3project.azurewebsites.net",
+                    "sslState": 0,
+                    "ipBasedSslResult": null,
+                    "virtualIP": null,
+                    "thumbprint": null,
+                    "toUpdate": null,
+                    "toUpdateIpBasedSsl": null,
+                    "ipBasedSslState": 0,
+                    "hostType": 0
+                  },
+                  {
+                    "name": "tesh3project.scm.azurewebsites.net",
+                    "sslState": 0,
+                    "ipBasedSslResult": null,
+                    "virtualIP": null,
+                    "thumbprint": null,
+                    "toUpdate": null,
+                    "toUpdateIpBasedSsl": null,
+                    "ipBasedSslState": 0,
+                    "hostType": 1
+                  }
+                ],
+                "computeMode": null,
+                "serverFarm": null,
+                "serverFarmId": "/subscriptions/e4992556-c317-47df-93b8-f1d3ba8604c2/resourceGroups/MiProyecto/providers/Microsoft.Web/serverfarms/ASP-MiProyecto-90af",
+                "reserved": false,
+                "isXenon": false,
+                "hyperV": false,
+                "lastModifiedTimeUtc": "2020-06-08T21:57:49.46",
+                "storageRecoveryDefaultState": "Running",
+                "contentAvailabilityState": 0,
+                "runtimeAvailabilityState": 0,
+                "siteConfig": {
+                  "numberOfWorkers": null,
+                  "defaultDocuments": null,
+                  "netFrameworkVersion": null,
+                  "phpVersion": null,
+                  "pythonVersion": null,
+                  "nodeVersion": null,
+                  "powerShellVersion": null,
+                  "linuxFxVersion": null,
+                  "windowsFxVersion": null,
+                  "requestTracingEnabled": null,
+                  "remoteDebuggingEnabled": null,
+                  "remoteDebuggingVersion": null,
+                  "httpLoggingEnabled": null,
+                  "azureMonitorLogCategories": null,
+                  "acrUseManagedIdentityCreds": false,
+                  "acrUserManagedIdentityID": null,
+                  "logsDirectorySizeLimit": null,
+                  "detailedErrorLoggingEnabled": null,
+                  "publishingUsername": null,
+                  "publishingPassword": null,
+                  "appSettings": null,
+                  "metadata": null,
+                  "connectionStrings": null,
+                  "machineKey": null,
+                  "handlerMappings": null,
+                  "documentRoot": null,
+                  "scmType": null,
+                  "use32BitWorkerProcess": null,
+                  "webSocketsEnabled": null,
+                  "alwaysOn": null,
+                  "javaVersion": null,
+                  "javaContainer": null,
+                  "javaContainerVersion": null,
+                  "appCommandLine": null,
+                  "managedPipelineMode": null,
+                  "virtualApplications": null,
+                  "winAuthAdminState": null,
+                  "winAuthTenantState": null,
+                  "customAppPoolIdentityAdminState": null,
+                  "customAppPoolIdentityTenantState": null,
+                  "runtimeADUser": null,
+                  "runtimeADUserPassword": null,
+                  "loadBalancing": null,
+                  "routingRules": null,
+                  "experiments": null,
+                  "limits": null,
+                  "autoHealEnabled": null,
+                  "autoHealRules": null,
+                  "tracingOptions": null,
+                  "vnetName": null,
+                  "cors": null,
+                  "push": null,
+                  "apiDefinition": null,
+                  "apiManagementConfig": null,
+                  "autoSwapSlotName": null,
+                  "localMySqlEnabled": null,
+                  "managedServiceIdentityId": null,
+                  "xManagedServiceIdentityId": null,
+                  "ipSecurityRestrictions": null,
+                  "scmIpSecurityRestrictions": null,
+                  "scmIpSecurityRestrictionsUseMain": null,
+                  "http20Enabled": null,
+                  "minTlsVersion": null,
+                  "ftpsState": null,
+                  "preWarmedInstanceCount": null,
+                  "healthCheckPath": null,
+                  "fileChangeAuditEnabled": null,
+                  "functionsRuntimeScaleMonitoringEnabled": null,
+                  "websiteTimeZone": null,
+                  "minimumElasticInstanceCount": 0
+                },
+                "deploymentId": "TESH3Project",
+                "trafficManagerHostNames": null,
+                "sku": "Free",
+                "scmSiteAlsoStopped": false,
+                "targetSwapSlot": null,
+                "hostingEnvironment": null,
+                "hostingEnvironmentProfile": null,
+                "clientAffinityEnabled": true,
+                "clientCertEnabled": false,
+                "clientCertMode": 0,
+                "clientCertExclusionPaths": null,
+                "hostNamesDisabled": false,
+                "domainVerificationIdentifiers": null,
+                "customDomainVerificationId": "2912430C35D760BD48626B0A7BA34B6276A5B8AFF811E11187A5802295CF29F0",
+                "kind": "app",
+                "inboundIpAddress": "52.171.222.247",
+                "possibleInboundIpAddresses": "52.171.222.247",
+                "ftpUsername": "TESH3Project\\$TESH3Project",
+                "ftpsHostName": "ftps://waws-prod-sn1-153.ftp.azurewebsites.windows.net/site/wwwroot",
+                "outboundIpAddresses": "52.171.222.247,13.66.17.222,13.66.52.32,13.66.18.19,13.66.17.225",
+                "possibleOutboundIpAddresses": "52.171.222.247,13.66.17.222,13.66.52.32,13.66.18.19,13.66.17.225,13.66.17.244,13.66.38.114",
+                "containerSize": 0,
+                "dailyMemoryTimeQuota": 0,
+                "suspendedTill": null,
+                "siteDisabledReason": 0,
+                "functionExecutionUnitsCache": null,
+                "maxNumberOfWorkers": null,
+                "homeStamp": "waws-prod-sn1-153",
+                "cloningInfo": null,
+                "hostingEnvironmentId": null,
+                "tags": {
+                  "hidden-related:/subscriptions/e4992556-c317-47df-93b8-f1d3ba8604c2/resourceGroups/MiProyecto/providers/Microsoft.Web/serverfarms/ASP-MiProyecto-90af": "empty"
+                },
+                "resourceGroup": "TESH3ProjectRG",
+                "defaultHostName": "tesh3project.azurewebsites.net",
+                "slotSwapStatus": null,
+                "httpsOnly": true,
+                "redundancyMode": 0,
+                "inProgressOperationId": null,
+                "geoDistributions": null,
+                "privateEndpointConnections": [],
+                "buildVersion": null,
+                "targetBuildVersion": null
+              },
+              "identity": {
+                "type": "SystemAssigned",
+                "tenantId": "d8e658cb-faff-4c55-81f8-05ef0b9bd46c",
+                "principalId": "44105457-cf58-4fb5-8ce9-9e0f469dcdeb"
+              },
+              "apiVersion": "2015-05-01"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
