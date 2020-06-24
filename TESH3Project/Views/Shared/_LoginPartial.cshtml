@@ -6,7 +6,7 @@
     @Html.AntiForgeryToken()
     <ul class="nav navbar-nav navbar-right">
         <li>
-            <a href="~/Views/Manage/Index.cshtml">@ViewBag.FirstName @ViewBag.LastName</a>
+            <a href="/Manage/Index">@ViewBag.FirstName @ViewBag.LastName</a>
             @*@Html.ActionLink("Hola " + " " + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })*@
         </li>
         <li><a href="javascript:document.getElementById('logoutForm').submit()">Salir</a></li>

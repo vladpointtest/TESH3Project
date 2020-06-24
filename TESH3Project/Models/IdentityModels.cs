@@ -37,5 +37,9 @@ namespace TESH3Project.Models
         {
             return new ApplicationDbContext();
         }
+
+        //public System.Data.Entity.DbSet<TESH3Project.Models.RoleViewModel> RoleViewModels { get; set; }
+
+        //public System.Data.Entity.DbSet<TESH3Project.Models.EditUserViewModel> EditUserViewModels { get; set; }
     }
 }
